@@ -1,0 +1,3 @@
+version: 1.0.0
+name: GenericService
+deployment-type: ablapp

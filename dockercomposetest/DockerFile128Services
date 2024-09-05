@@ -1,0 +1,13 @@
+FROM image128
+
+COPY AdvCustomer.r  /psc/wrk/oepas1/openedge
+COPY SportsInc.war /psc/wrk
+COPY openedge.properties /psc/wrk/oepas1/conf/openedge.properties
+RUN  /psc/wrk/oepas1/bin/tcman.sh deploy -I oepas1 /psc/wrk/SportsInc.war
+
+EXPOSE 8810
+EXPOSE 8811
+EXPOSE 8820
+
+EXPOSE 9090
+EXPOSE 4567

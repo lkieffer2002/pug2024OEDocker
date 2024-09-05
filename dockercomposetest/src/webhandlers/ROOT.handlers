@@ -1,0 +1,10 @@
+{
+  "version": "2.0",
+  "serviceName": "",
+  "handlers": [
+    { "uri": "/api/{apitype}/{entityname}/{id1}/{entityname2}/{id2}", "class": "GenericService", "enabled": true },
+    { "uri": "/api/{apitype}/{entityname}/{id1}/{entityname2}", "class": "GenericService", "enabled": true },
+    { "uri": "/api/{apitype}/{entityname}/{id1}", "class": "GenericService", "enabled": true },
+    { "uri": "/api/{apitype}/{entityname}", "class": "GenericService", "enabled": true }
+  ]
+}
