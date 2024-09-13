@@ -1,0 +1,8 @@
+Progress Application Server for OpenEdge (PAS for OpenEdge) v12 - Docker Container Image 
+
+Copyright © 1984-2024 Progress Software Corporation and/or one of its subsidiaries or affiliates. All rights reserved.
+
+Portions of the Product include certain open source and commercial third-party components (“Third-Party Components”) listed in Notice file on the ESD (Electronic Software Distribution) ; URL - https://progress.subscribenet.com/control/prgs/index. 
+The authors of the Third-Party Components require Progress Software Corporation (“PSC”) to include the notices and additional licensing terms as a condition of PSC’s use of such Third-Party Components.  You acknowledge that the authors of the Third-Party Components have no obligation to provide support to you for the Third-Party Components or the Product.  You hereby undertake to comply with all licenses related to the applicable Third-Party Components.  Notwithstanding anything to the contrary, to the extent that any of the terms and conditions of the Progress Agreement conflict, vary, or are in addition to the terms and conditions of the aforementioned third-party licenses for these technologies, such terms and conditions are offered by PSC alone and not by any other party.
+
+NOTICE FROM PROGRESS SOFTWARE CORPORATION: Additional notices may be included in the release notes or other documentation that accompanies updates received in connection with support of the Product.

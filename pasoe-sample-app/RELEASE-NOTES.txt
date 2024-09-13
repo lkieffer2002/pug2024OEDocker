@@ -1,0 +1,91 @@
+Linux 64-bit Progress Application Server for OpenEdge (PAS for OpenEdge) v12.6 - Docker Container Image
+
+The Docker container image for PAS for OpenEdge includes a lightweight version of PAS for OpenEdge 
+and uses CentOS as the container OS.
+===========================================================================================================
+
+Date: Aug, 2022
+--------------------------------
+Copyright (c) 1984-2022 Progress Software Corporation.  All rights reserved.
+
+
+To view the list of product notes and known issues, please go to: 
+https://docs.progress.com/category/whats_new.
+
+
+To view the complete documentation on the container image for PASOE, please go to:
+https://docs.progress.com/bundle/pas-for-openedge-docker
+
+
+See the following Wiki for additional resources on the container image for PASOE:
+* https://community.progress.com/community_groups/openedge_deployment/w/openedgedeployment/3280.docker-container-for-pasoe-faq
+
+CHANGE LOG
+
+2022-08-24
+==========
+
+Features
+--------
+* Base Image for 12.6.0 production PASOE
+
+2018-10-16
+==========
+
+Features
+--------
+* Base Image for 11.7.4 production PASOE
+* Support for deployment of Data Services
+** Transports: apsv, rest, web (Data Service Configuration)
+* Connection to database via network
+* Supported host environment: RHEL + Docker-EE
+* Optimized file permissions for security
+* PASOE runs as pscadmin account
+* Lightweight Image
+* UTF-8 support
+
+2018-11-19
+==========
+
+Features
+--------
+* Support for EFK Stack (Elasticsearch, Fluent Bit, Kibana)
+* Stopping a PASOE container [docker stop <Container_ID>] stops its internal PASOE gracefully and writes log information to respective logs.
+
+2019-02-01
+==========
+
+Features
+--------
+* Base Image for 12.0 production PASOE
+* Support for Mapped Diagnostic Content (MDC) to add, remove, and rearrange fields to conform to the log-file and scanning standards of the enterprise.
+* Logging support for authentication and authorization logs in EFK stack (Elasticsearch, Fluent Bit, Kibana).
+
+2019-09-05
+==========
+
+Features
+--------
+* Base Image for 12.1 production PASOE without JDK
+** Startup scripts inside the image for starting the server and deploying applications
+** Fluentbit Configuration forwards logs to sysout by default
+* Deployment scripts for different environments such as docker, docker-compose and minikube
+** Support for including JDK from a sidecar docker container
+** Support for customizing logging configurations, eg: forward logs to Elastic(EFK stack) by updating output configuration
+** Update the database configurations during deployment
+
+2020-03-16
+==========
+
+Features
+--------
+* Base Image for 12.2 production PASOE
+* PASOE 12.2 docker image is certified on Java 11
+
+2020-09-07
+==========
+
+Features
+--------
+* Base Image for 12.3 production PASOE
+* PASOE 12.3 docker image is certified on Java 11

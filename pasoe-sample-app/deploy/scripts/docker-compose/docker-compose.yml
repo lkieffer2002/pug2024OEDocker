@@ -1,0 +1,40 @@
+version: "3.6"
+services:
+    jdk:
+        image: jdkimage17:latest
+        volumes:
+          - jdk_dc:/opt/java/openjdk
+    ablapp:
+        image: sports:12.8.3
+        volumes:
+          - app_dc:/deploy-staging/artifacts
+    pasoeinstance:
+        image: progresssoftware/prgs-pasoe:12.8.3
+        depends_on: 
+          - jdk
+          - ablapp
+        environment:
+          - FLUENTBIT_LOGGING=false
+          - APP_NAME=sports
+          - INSTANCE_NAME=oepas1
+        ports:
+          - "8811:8811"
+        container_name: "oepas1_pasoeinstance_dc"
+        command: ["/bin/sh", "-c", "sh /deploy/scripts/startServer.sh"]
+        volumes:
+          - type: volume
+            source: jdk_dc
+            target: /usr/java
+            volume:
+              nocopy: true
+          - type: volume
+            source: app_dc
+            target: /deploy/artifacts
+            volume:
+              nocopy: true
+          - C:\OpenEdge128\WRK\docker\pasoe-sample-app\deploy\license\progress.cfg:/psc/dlc/progress.cfg
+          - C:\OpenEdge128\WRK\docker\pasoe-sample-app\deploy\conf\runtime.properties:/deploy/scripts/config/runtime.properties
+          - C:\OpenEdge128\WRK\docker\pasoe-sample-app\deploy\conf\logging:/fluentbit-tlr
+volumes:
+    jdk_dc:
+    app_dc:
